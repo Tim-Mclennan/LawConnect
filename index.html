@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LawConnect</title>
+    <!-- Link below will be referring to external stylesheet, however, I will be editing in SCSS file (styles.scss) for efficiency. -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link below connects to an external site that provides icons/logos. -->
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  </head>
+  <body>
+    <div class="navBar">
+      <img alt="LawConnect" class="navBar__Logo" src="./assets/logos/LawConnect-logo-reverse-RGB.png"/>
+      <nav class="navBar__Links" id="navBarLinks">
+        <a class="navBar__Links--close" id="menuClose"><i class="nav__lists--close bx bx-x"></i></a>
+        <p  class="navBar__Links--para">For People</p>
+        <p  class="navBar__Links--para">For Businesses</p>
+        <p  class="navBar__Links--para">Contact</p>
+      </nav>
+      <div  class="navBar__Login">
+        <div class="navBar__Login--Link">Login</div>
+        <button class="navBar__Login--btn">Create Free Account</button>
+      </div>
+      <div class="navBar__btn">
+        <i class='navBar__btn--color bx bx-menu'  id="navBtn"></i>
+      </div>
+    </div>
+    <section class="main">
+      <div class="main__content">
+        <div class="main__content__copy">
+          <h4 class="main__content__copy--header">The place to work with your lawyer</h4>
+          <p class="main__content__copy--para">Your lawyer uses LawConnect to share information with you about your legal case in a private, convenient and secure way.</p>
+          <button class="main__content__copy--btn">Create Free Account</button>
+        </div>
+        <svg class="main__content__circle" height="1000" width="1000">
+          <circle cx="500" cy="500" r="300" stroke="rgb(14,95,226)" stroke-width="80" fill="transparent" />
+        </svg> 
+        <img class="main__content__img" src="./assets/images/lc-hero-desktop.png" alt="product demo" />
+        <img class="main__content__img--tablet" src="./assets/images/lc-hero-mobile.png" alt="product demo" />
+      </div>
+    </section>
+    <section class="products">
+      <h1 class="products__header">One Solution Designed to Make Your Firm More Money</h1>
+      <div class="products__content">
+        <div class="products__content__card">
+          <img class="products__content__card__img" src="./assets/images/lc-safe-docs.jpg" />
+          <div class="products__content__card__copy">
+            <p class="products__content__card__copy--header">Safe Documents</p>
+            <p class="products__content__card__copy--para">LawConnect stores its data on services provided by Amazon Web Services and is safer than email.</p>
+          </div>
+        </div>
+        <div class="products__content__card">
+          <img class="products__content__card__img" src="./assets/images/lc-work-remote.jpg" />
+          <div class="products__content__card__copy">
+            <p class="products__content__card__copy--header">Work remotely</p>
+            <p class="products__content__card__copy--para">You can sign in to LawConnect and view, collaborate and share your documents from anywhere..</p>
+          </div>
+        </div>
+        <div class="products__content__card">
+          <img class="products__content__card__img" src="./assets/images/lc-greater-collab.jpg" />
+          <div class="products__content__card__copy">
+            <p class="products__content__card__copy--header">Greater Collaboration</p>
+            <p class="products__content__card__copy--para">Collaborate on documents with clients, lawyers and other parties with LawConnect's Comment and Reply.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="docShare">
+      <div class="docShare__content">
+        <div class="docShare__content__copy">
+          <p class="docShare__content__copy--header">Sharing Documents</p>
+          <p class="docShare__content__copy--para">Your lawyer will share documents related to your case with you, via LawConnect. Each time a document is shared by your lawyer, you will receive an email notification so you can access the document.</p>
+          <br>
+          <p class="docShare__content__copy--para">If you already have a LawConnect account, you can login and an alert will be in your notification tab that a document has been shared.</p>
+        </div>
+        <img src="./assets/images/lc-share-docs.png" alt="Woman using the LawConnect app" class="docShare__content__img"/>
+      </div>
+    </section>
+    <section class="docSign">
+      <div class="docSign__content">
+        <img src="./assets/images/lc-sign-docs-desktop.png" alt="DocuSign Page on LawConnect" class="docSign__content__img"/>
+        <div class="docSign__content__copy">
+          <p class="docSign__content__copy--header">Signing Documents Electronically</p>
+          <p class="docSign__content__copy--para">LawConnect integrates with DocuSign to provide our users with a quick, easy and secure way to sign important legal documents online.</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

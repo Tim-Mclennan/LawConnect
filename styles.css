@@ -1,0 +1,413 @@
+/* PREFACE - For this scss file, I have decided to use the BEM notation to structure my properties. BEM stands for 'Block__Element--Modifier'. Using BEM is an efficient way to change and edit CSS properties at a large scale.*/
+/* I have also included the use of external pre-set SCSS variables which contain properties such as colour themes and screen sizes. Using external SCSS files for preset variables is a great tool to use for larger, complex projects as it makes CSS more modular and easier to read. */
+/* GOOGLE FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* The '*' selector selects all elements in an HTML file. I am declaring the margin, padding and box-sizing properties to get rid of default values throughout the doc. */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  background-color: transparent;
+  z-index: 10;
+  padding: 20px 15%;
+  height: 10%;
+}
+@media only screen and (max-width: 750px) {
+  .navBar {
+    padding: 15px;
+    background-color: rgb(14, 95, 226);
+  }
+}
+.navBar__Logo {
+  width: 200px;
+}
+.navBar__Links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 20px;
+}
+@media only screen and (max-width: 750px) {
+  .navBar__Links {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -751px;
+    height: 100vh;
+    width: 70%;
+    background-color: rgb(14, 95, 226);
+    box-shadow: 0 40px 100px rgb(0, 0, 0);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+    font-size: 2rem;
+    gap: 40px;
+  }
+}
+.navBar__Links--close {
+  display: none;
+  font-size: 4rem;
+}
+@media only screen and (max-width: 750px) {
+  .navBar__Links--close {
+    cursor: pointer;
+    display: block;
+  }
+}
+.navBar__Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  gap: 10px;
+}
+@media only screen and (max-width: 750px) {
+  .navBar__Login {
+    display: none;
+  }
+}
+.navBar__Login--btn {
+  color: white;
+  background-color: rgb(42, 183, 253);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 180px;
+}
+.navBar__Login--btn:hover {
+  background-color: rgb(5, 54, 132);
+  padding: 7px;
+  transition: 0.3s;
+}
+.navBar__btn {
+  font-size: 3rem;
+  display: none;
+  color: white;
+}
+@media only screen and (max-width: 750px) {
+  .navBar__btn {
+    display: block;
+  }
+}
+
+.main {
+  background-image: linear-gradient(0deg, rgb(10, 73, 175), rgb(14, 95, 226));
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  padding: 0px 20%;
+  height: 80vh;
+  overflow: hidden;
+}
+@media only screen and (max-width: 750px) {
+  .main {
+    padding: 10px;
+    height: 100vh;
+    margin-top: 50px;
+  }
+}
+.main__content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media only screen and (max-width: 750px) {
+  .main__content {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+.main__content__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  gap: 20px;
+  padding-right: 15px;
+}
+@media only screen and (max-width: 750px) {
+  .main__content__copy {
+    text-align: center;
+    align-items: center;
+    padding: 0;
+  }
+}
+.main__content__copy--header {
+  font-size: 2.5rem;
+  font-weight: 500;
+  z-index: 1;
+}
+@media only screen and (max-width: 750px) {
+  .main__content__copy--header {
+    font-size: 2rem;
+  }
+}
+.main__content__copy--para {
+  font-weight: 100;
+  z-index: 1;
+  padding-right: 50px;
+  font-size: 0.9rem;
+}
+@media only screen and (max-width: 750px) {
+  .main__content__copy--para {
+    padding: 0%;
+  }
+}
+.main__content__copy--btn {
+  color: white;
+  background-color: rgb(42, 183, 253);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 180px;
+  height: 40px;
+  z-index: 1;
+}
+@media only screen and (max-width: 750px) {
+  .main__content__copy--btn {
+    width: 90vw;
+  }
+}
+.main__content__copy--btn:hover {
+  background-color: rgb(5, 54, 132);
+  padding: 7px;
+  transition: 0.3s;
+}
+.main__content__circle {
+  position: absolute;
+  right: -200px;
+}
+@media only screen and (max-width: 750px) {
+  .main__content__circle {
+    display: none;
+  }
+}
+.main__content__img {
+  width: 60%;
+  z-index: 1;
+}
+@media only screen and (max-width: 750px) {
+  .main__content__img {
+    display: none;
+  }
+}
+.main__content__img--tablet {
+  display: none;
+}
+@media only screen and (max-width: 750px) {
+  .main__content__img--tablet {
+    display: block;
+  }
+}
+
+.products {
+  background-color: white;
+  width: 100%;
+  padding: 50px 20%;
+}
+@media only screen and (max-width: 750px) {
+  .products {
+    padding: 10px;
+    height: 100%;
+  }
+}
+.products__header {
+  color: rgb(14, 95, 226);
+  margin: 0px auto 50px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 2rem;
+}
+@media only screen and (max-width: 750px) {
+  .products__header {
+    font-size: 1.7rem;
+    margin: 10px 5px;
+    width: 90%;
+  }
+}
+.products__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+}
+@media only screen and (max-width: 750px) {
+  .products__content {
+    flex-direction: column-reverse;
+  }
+}
+.products__content__card {
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 750px) {
+  .products__content__card {
+    width: 80vw;
+  }
+}
+.products__content__card__img {
+  width: 100%;
+  height: 50%;
+  border-radius: 5px 5px 0px 0px;
+}
+.products__content__card__copy {
+  padding: 20px;
+}
+.products__content__card__copy--header {
+  color: rgb(14, 95, 226);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.products__content__card__copy--para {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+.docShare {
+  background-color: rgb(246, 247, 248);
+  width: 100%;
+  padding: 50px 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 750px) {
+  .docShare {
+    padding: 20px 0px;
+    height: 100%;
+  }
+}
+.docShare__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+}
+@media only screen and (max-width: 750px) {
+  .docShare__content {
+    flex-direction: column-reverse;
+    gap: 20px;
+    align-items: center;
+  }
+}
+.docShare__content__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+@media only screen and (max-width: 750px) {
+  .docShare__content__copy {
+    width: 90%;
+  }
+}
+.docShare__content__copy--header {
+  color: rgb(14, 95, 226);
+  font-size: 2rem;
+  font-weight: 400;
+}
+.docShare__content__copy--para {
+  color: gray;
+  font-size: 0.8rem;
+}
+@media only screen and (max-width: 750px) {
+  .docShare__content__img {
+    width: 70%;
+  }
+}
+
+.docSign {
+  background-color: white;
+  width: 100%;
+  padding: 50px 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 750px) {
+  .docSign {
+    padding: 20px 0px;
+    height: 100%;
+  }
+}
+.docSign__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+}
+@media only screen and (max-width: 750px) {
+  .docSign__content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+.docSign__content__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 40%;
+}
+@media only screen and (max-width: 750px) {
+  .docSign__content__copy {
+    width: 90%;
+  }
+}
+.docSign__content__copy--header {
+  color: rgb(14, 95, 226);
+  font-size: 2rem;
+  font-weight: 400;
+}
+.docSign__content__copy--para {
+  color: gray;
+  font-size: 0.8rem;
+}
+@media only screen and (max-width: 750px) {
+  .docSign__content__img {
+    width: 70%;
+  }
+}
+
+footer {
+  background-color: black;
+  height: 100px;
+  width: 100%;
+}
+@media only screen and (max-width: 750px) {
+  footer {
+    height: 50px;
+  }
+}
+
+.active {
+  right: 1px;
+}
